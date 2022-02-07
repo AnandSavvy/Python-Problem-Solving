@@ -1,0 +1,1 @@
+print("{0:} learning python {1:}  {2:}".format("anand","Data Science","daily")) 
