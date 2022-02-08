@@ -1,8 +1,13 @@
-def decorator_list(fn):
-    def inner(list_of_tuples):
-        return [fn(val[0],val[1]) for val in list_of_tuples]
-    return inner
-@decorator_list
-def add_together(a,b):
-    return a*b
-print([(1,3),(3,5),(5,7),(7,9)])
+def smart_division(fun_):
+	def inner(x,y):
+		if y==0:
+			print("hi..") 
+		else:
+			print("hello..")
+			return fun_(x,y)
+	return inner;
+#@smart_division 
+def divide(a,b):
+	return a/b;
+d=smart_division(divide)
+print(d (1,2))
